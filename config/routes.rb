@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # get 'venues/index'
+  # get 'venues/new'
+  # get 'venues/edit'
+  # get 'venues/show'
+  # get 'venues/_form'
+  devise_for :users
+  resources :events
+  resources :venues
+  # get 'home/index'
+  root to: "home#index"
 end
