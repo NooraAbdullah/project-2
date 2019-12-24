@@ -8,12 +8,17 @@
 user = User.find(1)
 user_two = User.find(2)
 user_three = User.find(3)
+##Events
+user.events.create(date: '16/1/2021', type_of: 'party')
+user_two.events.create(date: '17/1/2020', type_of: 'Meeting')
+user_three.events.create(date: '17/2/2022', type_of: 'Wedding')
 
-user.events.create(date: '16/1/2021', venue:'Z', type_of: 'party')
-user_two.events.create(date: '17/1/2020', venue:'Y', type_of: 'Meeting')
-user_three.events.create(date: '17/2/2022', venue:'z', type_of: 'Wedding')
 
 
-Venue.create(name: 'X', city: 'Riyadh', price: '50,000 SR', capacity:'200', phone: '05xxxxxxxx', image:'none')
-Venue.create(name: 'Y', city: 'Jeddah', price: '100,000 SR', capacity:'1000', phone: '05xxxxxxxx', image:'none')
-Venue.create(name: 'Z', city: 'Riyadh', price: '20,000 SR', capacity:'150', phone: '05xxxxxxxx', image:'none')
+# venue_one = Venue.find()
+# venue_two = Venue.find()
+# venue_three = Venue.find()
+##Venues
+Venue.create(name: 'A', city: 'Riyadh', price: '50,000 SR', capacity:'200', phone: 'xxxxxxxx', image:'nonee')
+Venue.create(name: 'B', city: 'Jeddah', price: '100,000 SR', capacity:'1000', phone: '05xxxxxxxx', image:'nonee')
+Venue.create(name: 'C', city: 'Riyadh', price: '20,000 SR', capacity:'150', phone: '05xxxxxxxx', image:'nonee')

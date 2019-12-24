@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'decorators/index'
+  get 'decorators/show'
   # get 'venues/index'
   # get 'venues/new'
   # get 'venues/edit'
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :events
   resources :venues
+  # resources :photog
   # get 'home/index'
   root to: "home#index"
 end

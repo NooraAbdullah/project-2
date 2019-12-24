@@ -1,5 +1,13 @@
-<h1>New Event</h1>
+<%= form_for @event, url:{action: "create"} do |event| %>
+    <%= event.label :date%>
+    <%= event.date_field :date%>
+    <br>
+    <%= event.label :venue%>
 
-<%= render 'form', event: @event %>
-
-<%= link_to 'Back', events_path %>
+    <%= select_tag("event[venue_id]", options_from_collection_for_select(@venues, "id", "name") )%>
+    <br>
+    <%= event.label :type_of%>
+    <%= event.text_field :type_of%>
+    <br>
+    <%= event.submit%>
+<% end %>

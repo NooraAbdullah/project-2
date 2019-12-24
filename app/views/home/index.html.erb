@@ -1,17 +1,18 @@
+<div class = "sign">
 <% if(user_signed_in?) %>
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :class => "sig" %>||
+
     <%= link_to 'Update user info', edit_user_registration_path %>
 <% end %>
-<h1>Hello <%=@user.name%></h1>
+</div>
+<h1 class ="name">Hello <%=@user.name%></h1>
+<div class=" buttonHolder">
+<button type="button"  ><%= link_to "My Events", events_path%></button>
 
-<button><%= link_to "My Events", events_path%></button>
 
-<br>
-<br>
+<button type="button"  ><%= link_to "Venues", venues_path%></button>
 
-<button><%= link_to "Venues", venues_path%></button>
 
-<br>
-<br>
+</div>
 <%# add photographers/deco %>
-<%= link_to 'New event', new_event_path %>
+<%# <%= link_to 'New event', new_event_path %>

@@ -16,6 +16,7 @@ class EventsController < ApplicationController
     # GET /events/new
     def new
       @event = @events.new
+      @venues = Venue.all
     end
   
     # GET /events/1/edit
@@ -26,8 +27,10 @@ class EventsController < ApplicationController
     # POST /events
     # POST /events.json
     def create
+  
       @event = @events.new(event_params)
-      
+      @event.venue_id = @event.venue_id.to_i
+      puts @event
       respond_to do |format|
         if @event.save
           format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -72,6 +75,6 @@ class EventsController < ApplicationController
       end
       # Never trust parameters from the scary internet, only allow the white list through.
       def event_params
-        params.require(:event).permit(:date, :user, :venue, :type_of)
+        params.require(:event).permit(:date, :venue_id, :type_of)
       end
 end
