@@ -20,8 +20,8 @@
         <td><%= event.decorator.name %></td>
         <td><%= event.venue.name %></td> 
         <td><%= event.type_of %></td>
-        <td class="showDest"><%= link_to 'Show', event %></td>
-        <td class="showDest"><%= link_to 'Destroy', event, method: :delete,  data: { confirm: 'Are you sure?' } %></td>
+        <td class="showDest"><%= link_to 'Show', event, :class => "btn-header header" %></td>
+        <td class="showDest"><%= link_to 'Destroy', event, method: :delete,  data: { confirm: 'Are you sure?' }, :class => "btn-header header" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,10 +29,10 @@
 
 <br>
 <div class = "buttonHolder">
-<button class = " headers " ><%= link_to 'New Event', new_event_path %> </button>
+<button class = " headers event-buttons " ><%= link_to 'New Event', new_event_path, :class => "btn-header header" %> </button>
 
 
-<button class = " headers " ><%= link_to 'Home', root_path%></button>
+<button class = " headers event-buttons" ><%= link_to 'Home', root_path, :class => "btn-header header"%> </button>
 </div>
 </div>
 </div>

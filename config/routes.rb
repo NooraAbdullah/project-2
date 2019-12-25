@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'decorators/index'
-  get 'decorators/show'
+  get "/decorators", to: "decorators#index", as: "decorators"
+  get "/decorators/:id", to: "decorators#show", as: "decorator"
   # get 'venues/index'
   # get 'venues/new'
   # get 'venues/edit'

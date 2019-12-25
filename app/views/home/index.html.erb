@@ -1,24 +1,141 @@
-<%# <div class = "homeBody" style = 'background-image: image(https://www.google.com/search?q=black+background+decoration&safe=strict&rlz=1C5CHFA_enSA874SA874&sxsrf=ACYBGNSJICE_zWwsz4FxDb2WVK_FAiHd0w:1577184644872&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjmzoLUjs7mAhUJkhQKHYRjDU4Q_AUoAXoECAwQAw&biw=1280&bih=688#imgrc=z60uLuKh_T7_HM&imgdii=NGLnFDuLskZbuM)'> %>
-<div class="home-body">
-<%# <img class = "background" height="42"  width="42" src = "https://images.squarespace-cdn.com/content/v1/586c8356d1758eb4883e1c6f/1536678686582-2XZMGOGWBTOLKW2KGN1I/ke17ZwdGBToddI8pDm48kPTrHXgsMrSIMwe6YW3w1AZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k5fwC0WRNFJBIXiBeNI5fKTrY37saURwPBw8fO2esROAxn-RKSrlQamlL27g22X2A/MEL_1246.jpg?format=2500w"> %>
-<div class = "sign">
-<% if(user_signed_in?) %>
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :class => "sig" %>||
+<!DOCTYPE html>
+<html lang="en">
 
-    <%= link_to 'Update User Info', edit_user_registration_path %>
-<% end %>
-</div>
-</div>
-<h1 class ="name">Hello <%=@user.name%></h1>
-<div class=" buttonHolder">
+<head>
 
-<button class = " home-button headers " ><%= link_to "Decorators", decorators_index_path%> </button> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <%# <div class = "sign">
+    <% if(user_signed_in?) %>
+        <%# <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :class => "sig" %>
+    
+        <%# <%= link_to 'Update User Info', edit_user_registration_path %>
+    <%# <% end %>
+    
+    
+    <%# </div> %>
 
-<button class = " home-button headers font buttons"><%= link_to "Venues", venues_path%></button>
-<br>
-<button class = " home-button headers my-events " ><%= link_to "My Events", events_path%></button>
+  <title>Hello <%=@user.name%></title>
 
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
-<%# add photographers/deco %>
-<%# <%= link_to 'New event', new_event_path %>
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <%# <a class="navbar-brand" href="#">Start Bootstrap</a> %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :class => "anchore" %> |||
+          <%# <a class="nav-link" href="#">XXXX </a> %>
+          </li>
+          <li class="nav-item ">
+          <%= link_to 'Update User Info', edit_user_registration_path, :class => "anchore" %> 
+  
+            <%# <a class="nav-link" href="#">Update User Info</a> %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h1 class="masthead-heading mb-0">Your Event</h1>
+        <h2 class="masthead-subheading mb-0">Will Rock</h2>
+        <%# <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a> %>
+      </div>
+    </div>
+    <%# <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div> %>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="https://image.freepik.com/free-photo/wedding-decoration-table-with-flower_99493-17.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="headers display-4"><%= link_to "Pick your venue...", venues_path, :class => "anchore" %></h2>
+            <p>Now you can book your venue for your occassion according to your needs, your budget, your dedicated location and the capacity you need </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="http://instantcoelho.com/public/24-Outdoor-Wedding-Decoration-Ideas.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-5">
+            <h2 class="headers display-4"><%= link_to "Choose The Best Decorators in Saudi Arabia", decorators_path , :class => "anchore"%></h2>
+            <p>Here the list of the decorators in Saudi Arabia, pick up the ones you liked to decorate your venue!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="https://s-media-cache-ak0.pinimg.com/564x/16/b7/c2/16b7c25f01f82d06e67e58276f1ec0dc.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="headers display-4"><%= link_to "Lets check out your events schedule!", events_path, :class => "anchore"%> </h2>
+            <p>Check your schedule of your reserved venues and decorators with ts assosiacted date.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright &copy; Occassion Planner 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

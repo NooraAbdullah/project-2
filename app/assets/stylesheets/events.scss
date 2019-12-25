@@ -28,12 +28,30 @@ font-family: 'Indie Flower', cursive;
 .btn:hover {
     // border: solide black 20px;
 }
+.btn-header:hover{
+    color: #bf8884;
+    text-decoration: none;
+  }
 #button{
     margin-left: 30%;
     font-family: 'Indie Flower', cursive;
     font-size: 3em;
 
 }
+.buttonHolder{
+    margin-top:20%;
+    margin-left:30%;
+}
+.event-buttons{
+    width:250px;
+    // length: 1200px; 
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    border-radius: 5px;
+    color: #5c5952;
+    margin:6px;
+}
+
 .showDest{
     font-family: 'Indie Flower', cursive;
     font-weight: 1000;
@@ -58,5 +76,8 @@ font-family: 'Indie Flower', cursive;
     font-size: 1.3em;
     margin-left:40%;
     margin-top:10%;
-
+}
+.show-holder{
+    margin-left:40%;
+    margin-top: 10%;
 }

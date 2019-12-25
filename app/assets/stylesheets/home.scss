@@ -1,104 +1,169 @@
-// https://www.google.com/search?q=black+background+decoration&tbm=isch&safe=strict&chips=q:black+background+decoration,g_1:blue+black+gold:c_G7KEYcVj8%3D&rlz=1C5CHFA_enSA874SA874&safe=strict&hl=en&ved=2ahUKEwj18sfWjs7mAhWM_4UKHV17DDMQ4lYoAnoECAEQFw&biw=1280&bih=597#imgrc=5ukE2B25dB-KlM
-.headers{
-    font-family: 'Dancing Script', cursive;
-    font-weight: 900;
-}
-.data {
-    // font-family: 'Roboto', sans-serif;
-    // font-family: 'Courgette', cursive;
-    // font-family: 'Chewy', cursive;
-    font-family: 'Itim', cursive;
-    // font-family: 'Caveat Brush', cursive;
-    font-weight: 900;
-}
-.home-body {
-    background-image: url("https://images.squarespace-cdn.com/content/v1/586c8356d1758eb4883e1c6f/1536678686582-2XZMGOGWBTOLKW2KGN1I/ke17ZwdGBToddI8pDm48kPTrHXgsMrSIMwe6YW3w1AZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k5fwC0WRNFJBIXiBeNI5fKTrY37saURwPBw8fO2esROAxn-RKSrlQamlL27g22X2A/MEL_1246.jpg?format=2500w")
-    // opacity: 0.5;
-    // background-repeat:none;
-    // background-size: 75% 50%;
 
-}
-.background{
-    // width:100%;
-    // length:100%;
-    // opacity: 0.5;
-}
-image {
-    opacity: 0.7;
-    size:100%;
-}
-
-.sig{
-    margin:10px;
-}
-.sign {
-margin-left:81%;
-margin-top:-2%;
-}
-.name{
-    margin-left:40%;
-    margin-top: 20%;
-    font-family: 'Dancing Script', cursive;
-    font-size: 4.5em;
-    text-shadow: 2px 2px #8c7372;
-    font-weight: 900;
-    color:#dbc8c8;
-}
-.buttonHolder {
-    margin-left:30%;
-    margin-top: 7%;
-}
-// .home-button{
-// background-color:#8c7372 ;
-// }
-.buttons{
-    padding-right: 70px;
-    padding-left: 70px;
-    text-align: center;   
-}
-button{
-    // border-radius: 10px;
-    // border-bottom-left-radius: 10px;
-    font-size : 2em;
-    font-weight: 800;
-    // color:  #5c5952;
-    background-color:  #8c7372;
-    color:#dbc8c8;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin: 20px;
-    left: 50%;
-    border-radius: 8px;
-    border:3px #5c5e61 solid;
-    background-color: #c9c9c9;
-    border-style: outset;
-    // background-image: url("https://images.squarespace-cdn.com/content/v1/586c8356d1758eb4883e1c6f/1536678686582-2XZMGOGWBTOLKW2KGN1I/ke17ZwdGBToddI8pDm48kPTrHXgsMrSIMwe6YW3w1AZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k5fwC0WRNFJBIXiBeNI5fKTrY37saURwPBw8fO2esROAxn-RKSrlQamlL27g22X2A/MEL_1246.jpg?format=2500w")
-}
-button:hover {
-    border: 5px #5c5e61 solid;
-    background-color: #d9d7d7;
-    border-style: outset;
-
-}
-a:hover {
-    color:  #5c5952;
-    text-decoration: none;
-    font-size: 1.2em; 
+body {
+    font-family: 'Lato';
   }
-a {
-    color:#dbc8c8;
-}
-.session {
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 800;
-    // justify-content: center;
-    // flex-direction: column;
-}
-.my-events {
-    margin-left:20% ; 
-}
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Catamaran';
+    font-weight: 800 !important;
+  }
+  .headers {
+    // font-family: 'Dancing Script', cursive;
+    font-family: 'Courgette', cursive;
+    font-weight: 900;
+  }
+  
+  .anchore{
+    color: #bf8884;
+  }
+  .anchore:hover {
+    color:#b59794 ;
+    // background-color:#bfb5b4 ;
+    text-decoration: none;
+  }
+  .btn-xl {
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+  }
+  
+  .bg-black {
+    background-color: #000 !important;
+  }
+  
+  .rounded-pill {
+    border-radius: 5rem;
+  }
+  
+  .navbar-custom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .navbar-custom .navbar-brand {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+  }
+  
+  .navbar-custom .navbar-nav .nav-item .nav-link {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+  }
+  
+  header.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(7rem + 72px);
+    padding-bottom: 7rem;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/586c8356d1758eb4883e1c6f/1536678686582-2XZMGOGWBTOLKW2KGN1I/ke17ZwdGBToddI8pDm48kPTrHXgsMrSIMwe6YW3w1AZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k5fwC0WRNFJBIXiBeNI5fKTrY37saURwPBw8fO2esROAxn-RKSrlQamlL27g22X2A/MEL_1246.jpg?format=2500w"); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  
+  header.masthead .masthead-content {
+    z-index: 1;
+    position: relative;
+  }
+  
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 4rem;
+  }
+  
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 2rem;
+  }
+  
+  header.masthead .bg-circle {
+    z-index: 0;
+    position: absolute;
+    border-radius: 100%;
+    background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
+  }
+  
+  header.masthead .bg-circle-1 {
+    height: 90rem;
+    width: 90rem;
+    bottom: -55rem;
+    left: -55rem;
+  }
+  
+  header.masthead .bg-circle-2 {
+    height: 50rem;
+    width: 50rem;
+    top: -25rem;
+    right: -25rem;
+  }
+  
+  header.masthead .bg-circle-3 {
+    height: 20rem;
+    width: 20rem;
+    bottom: -10rem;
+    right: 5%;
+  }
+  
+  header.masthead .bg-circle-4 {
+    height: 30rem;
+    width: 30rem;
+    top: -5rem;
+    right: 35%;
+  }
+  
+  @media (min-width: 992px) {
+    header.masthead {
+      padding-top: calc(10rem + 55px);
+      padding-bottom: 10rem;
+    }
+    header.masthead .masthead-content .masthead-heading {
+      font-size: 6rem;
+    }
+    header.masthead .masthead-content .masthead-subheading {
+      font-size: 4rem;
+    }
+  }
+  
+  .bg-primary {
+    background-color: #ee0979 !important;
+  }
+  
+  .btn-primary {
+    background-color: #ee0979;
+    border-color: #ee0979;
+  }
+  
+  .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #bd0760 !important;
+    border-color: #bd0760 !important;
+  }
+  
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
+  }
+  
+  .btn-secondary {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+  }
+  
+  .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+    background-color: #cc5500 !important;
+    border-color: #cc5500 !important;
+  }
+  
+  .btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+  }
+  
