@@ -1,18 +1,24 @@
+<%# <div class = "homeBody" style = 'background-image: image(https://www.google.com/search?q=black+background+decoration&safe=strict&rlz=1C5CHFA_enSA874SA874&sxsrf=ACYBGNSJICE_zWwsz4FxDb2WVK_FAiHd0w:1577184644872&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjmzoLUjs7mAhUJkhQKHYRjDU4Q_AUoAXoECAwQAw&biw=1280&bih=688#imgrc=z60uLuKh_T7_HM&imgdii=NGLnFDuLskZbuM)'> %>
+<div class="home-body">
+<%# <img class = "background" height="42"  width="42" src = "https://images.squarespace-cdn.com/content/v1/586c8356d1758eb4883e1c6f/1536678686582-2XZMGOGWBTOLKW2KGN1I/ke17ZwdGBToddI8pDm48kPTrHXgsMrSIMwe6YW3w1AZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k5fwC0WRNFJBIXiBeNI5fKTrY37saURwPBw8fO2esROAxn-RKSrlQamlL27g22X2A/MEL_1246.jpg?format=2500w"> %>
 <div class = "sign">
 <% if(user_signed_in?) %>
     <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :class => "sig" %>||
 
-    <%= link_to 'Update user info', edit_user_registration_path %>
+    <%= link_to 'Update User Info', edit_user_registration_path %>
 <% end %>
+</div>
 </div>
 <h1 class ="name">Hello <%=@user.name%></h1>
 <div class=" buttonHolder">
-<button type="button"  ><%= link_to "My Events", events_path%></button>
+
+<button class = " home-button headers " ><%= link_to "Decorators", decorators_index_path%> </button> 
+
+<button class = " home-button headers font buttons"><%= link_to "Venues", venues_path%></button>
+<br>
+<button class = " home-button headers my-events " ><%= link_to "My Events", events_path%></button>
 
 
-<button type="button"  ><%= link_to "Venues", venues_path%></button>
 
-
-</div>
 <%# add photographers/deco %>
 <%# <%= link_to 'New event', new_event_path %>

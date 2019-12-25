@@ -1,15 +1,29 @@
-// h1{
-//     text-align: center;
-//     margin:3%;
-//     font-family: 'Indie Flower', cursive;
-//     font-size: 3em;
-//     font-weight:900;
-// }
-// td{
-//     font-family: 'Alata', sans-serif;
+.venueHeader{
+    text-align: center;
+    margin:3%;
+    // font-family: 'Indie Flower', cursive;
+    font-size: 3em;
+    font-weight:900;
+    color:#5c5952;
+}
+td{
+    color: #5c5952
+}
+.rows {
+    font-family: 'Kanit', sans-serif;
 
-// }
-
+}
+table {
+    // margin: 13px;
+}
+.back {
+    margin-left:4%;
+    margin-bottom: 2%;
+    font-size: 2em;
+}
+.back:hover{
+    font-weight: 900;
+}
 body {
     // background-image: url(../images/venueB.jpg);
 }

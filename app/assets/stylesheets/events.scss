@@ -1,6 +1,12 @@
 body {
+    // background-image: url(https://images.squarespace-cdn.com/content/v1/586c8356d1758eb4883e1c6f/1536678686582-2XZMGOGWBTOLKW2KGN1I/ke17ZwdGBToddI8pDm48kPTrHXgsMrSIMwe6YW3w1AZ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0k5fwC0WRNFJBIXiBeNI5fKTrY37saURwPBw8fO2esROAxn-RKSrlQamlL27g22X2A/MEL_1246.jpg?format=2500w);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color:#aba9a4 ;
+    // color: black;
+    // font-family: 'Dancing Script', cursive;
 
+  
 }
 .event{
     // background-color:#aba9a4 ;
@@ -42,5 +48,15 @@ font-family: 'Indie Flower', cursive;
     text-align: center;
     font-family: 'Alata', sans-serif;
     font-weight: 900;
+}
+.newEvent{
+  margin-top: 10%;  
+}
+.yourEvents{
+    width:250px;
+    height: 90px;
+    font-size: 1.3em;
+    margin-left:40%;
+    margin-top:10%;
 
 }

@@ -7,6 +7,7 @@
   <thead class="thead-dark">
     <tr class="firstRow">
       <th>Date</th>
+      <th>Decorator</th>
       <th>Venue</th>
       <th>Type</th>
     </tr>
@@ -16,20 +17,22 @@
     <% @events.each do |event| %>
       <tr class="rows">
         <td><%= event.date %></td> 
-        <td><%= event.venue %></td> 
+        <td><%= event.decorator.name %></td>
+        <td><%= event.venue.name %></td> 
         <td><%= event.type_of %></td>
-        <td class="showDest"><%= link_to 'Show', event, :class => "btn btn-secondary" %></td>
-        <td class="showDest"><%= link_to 'Destroy', event, method: :delete, :class => "btn btn-secondary", data: { confirm: 'Are you sure?' } %></td>
+        <td class="showDest"><%= link_to 'Show', event %></td>
+        <td class="showDest"><%= link_to 'Destroy', event, method: :delete,  data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<div id= "button"class= "btn btn-secondary" style= "">
-<%= link_to 'New Event', new_event_path, :class => "btn btn-secondary" %>
+<div class = "buttonHolder">
+<button class = " headers " ><%= link_to 'New Event', new_event_path %> </button>
 
 
-<%= link_to 'Home', root_path, :class => "btn btn-secondary"%>
+<button class = " headers " ><%= link_to 'Home', root_path%></button>
+</div>
 </div>
 </div>

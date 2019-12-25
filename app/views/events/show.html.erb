@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class = "session">
+<%# <p id="notice"><%= notice %>
 
 <p>
-  <strong>Date:</strong>
-  <%= @event.date %>
+  <strong class = "header">Date:</strong>
+  <strong class = "data"> <%= @event.date  %> </strong>
 </p>
+
+<p >
+  <strong class = "header"> User:</strong>
+ <strong class = "data"> <%= @event.user.name %> </strong>
+</p>
+
 
 <p>
-  <strong>User:</strong>
-  <%= @event.user %>
-</p>
-
-
-<p>
-  <strong>Venue:</strong>
-  <%= @event.venue %>
+  <strong class = "header" >Venue:</strong>
+ <strong class = "data"> <%= @event.venue.name%> </strong>
 </p>
 <p>
-  <strong>Type:</strong>
-  <%= @event.type_of %>
+  <strong class = "header" >Type:</strong>
+ <strong class = "data"> <%= @event.type_of %> </strong>
 </p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
+<br>
+<br>
+<%= link_to 'Edit', edit_event_path(@event) %> 
 <%= link_to 'Back', events_path %>

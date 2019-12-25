@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_23_081212) do
+ActiveRecord::Schema.define(version: 2019_12_24_162035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "decorators", force: :cascade do |t|
+    t.string "name"
+    t.string "city"
+    t.string "price"
+    t.string "phone"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.datetime "date"
@@ -21,7 +31,11 @@ ActiveRecord::Schema.define(version: 2019_12_23_081212) do
     t.string "type_of"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "venue_id", null: false
+    t.bigint "decorator_id", null: false
+    t.index ["decorator_id"], name: "index_events_on_decorator_id"
     t.index ["user_id"], name: "index_events_on_user_id"
+    t.index ["venue_id"], name: "index_events_on_venue_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,5 +62,7 @@ ActiveRecord::Schema.define(version: 2019_12_23_081212) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "events", "decorators"
   add_foreign_key "events", "users"
+  add_foreign_key "events", "venues"
 end

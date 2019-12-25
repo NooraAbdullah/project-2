@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Venues</h1>
+<h1 class="venueHeader">Venues</h1>
 
 <table class="table">
   <thead class="thead-dark">
@@ -8,18 +8,15 @@
       <th>Name</th>
       <th>City</th>
       <th>Price</th>
-      <th>Capacity</th>
-      <th>Phone</th>
-      <th>Image</th>
     </tr>
   </thead>
 
   <tbody>
     <% @venues.each do |venue| %>
       <tr class="rows">
-        <td><%= venue.name %></td> 
-        <td><%= venue.city %></td>
-        <td><%= venue.price %></td>
+        <td class="rows"><%= venue.name %></td> 
+        <td class="rows"><%= venue.city %></td>
+        <td class="rows"><%= venue.price %></td>
         <td class="showDest" ><%= link_to 'More info', venue %></td>
       </tr>
     <% end %>
@@ -27,6 +24,5 @@
 </table>
 
 <br>
-
 <br>
-<%= link_to 'Back', root_path %>
+<div class = "back btn btn-secondary"><%= link_to 'Back', root_path %> </div>

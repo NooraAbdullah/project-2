@@ -1,22 +1,21 @@
 class EventsController < ApplicationController
     before_action :authenticate_user!, only: [:edit, :update, :destroy, :create, :new, :set_user_events]
-    before_action :set_user_events, only: [:edit, :update, :destroy, :new, :create]
+    before_action :set_user_events, only: [:edit, :update, :destroy, :new, :create, :index, :show]
     # GET /events
     # GET /events.json
     def index #/events
-      @events = Event.all
+     
     end
   
     # GET /events/1
     # GET /events/1.json
     def show
-      @event = Event.find(params[:id])
+      @event = @events.find(params[:id])
     end
   
     # GET /events/new
     def new
       @event = @events.new
-      @venues = Venue.all
     end
   
     # GET /events/1/edit
@@ -27,10 +26,7 @@ class EventsController < ApplicationController
     # POST /events
     # POST /events.json
     def create
-  
       @event = @events.new(event_params)
-      @event.venue_id = @event.venue_id.to_i
-      puts @event
       respond_to do |format|
         if @event.save
           format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -75,6 +71,7 @@ class EventsController < ApplicationController
       end
       # Never trust parameters from the scary internet, only allow the white list through.
       def event_params
-        params.require(:event).permit(:date, :venue_id, :type_of)
+        # debugger
+        params.require(:event).permit(:date, :venue_id, :type_of, :decorator_id)
       end
 end

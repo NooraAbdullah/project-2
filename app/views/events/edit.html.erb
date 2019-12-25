@@ -1,6 +1,20 @@
-<h1>Editing event</h1>
+<h1 class = "header">Editing event</h1>
 
-<%= render 'form', event: @event %>
+<div class = "session newEvent">
 
+<%= form_for @event, url:{action: "update"} do |event| %>
+    <%= event.label :date, :class => "headers" %>
+    <%= event.date_field :date%>
+    <br>
+    <%= event.label :venue, :class => "headers"%>
+
+    <%= select_tag("event[venue_id]", options_from_collection_for_select(Venue.all, "id", "name", @event.venue_id.to_s) )%>
+    <br>
+    <%= event.label :type_of, :class => "headers"%>
+    <%= event.text_field :type_of%>
+    <br>
+    <%= event.submit%>
+<% end %>
+</div>
 <%= link_to 'Show', @event %> |
 <%= link_to 'Back', events_path %>
