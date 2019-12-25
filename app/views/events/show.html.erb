@@ -17,11 +17,16 @@
  <strong class = "data"> <%= @event.venue.name%> </strong>
 </p>
 <p>
+  <strong class = "header" >Decorator:</strong>
+ <strong class = "data"> <%= @event.decorator.name%> </strong>
+</p>
+
+<p>
   <strong class = "header" >Type:</strong>
  <strong class = "data"> <%= @event.type_of %> </strong>
 </p>
 <br>
 <br>
-<%= link_to 'Edit', edit_event_path(@event), :class => ".btn-header" %> 
-<%= link_to 'Back', events_path, :class => ".btn-header" %>
+<%= link_to 'Edit', edit_event_path(@event), :class => "btn-header header" %> 
+<%= link_to 'Back', events_path, :class => "btn-header header" %>
 </div>

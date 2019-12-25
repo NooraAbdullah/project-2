@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="venueHeader">Venues</h1>
+<h1 class=" header">Venues</h1>
 
 <table class="table">
   <thead class="thead-dark">
@@ -17,7 +17,7 @@
         <td class="rows"><%= venue.name %></td> 
         <td class="rows"><%= venue.city %></td>
         <td class="rows"><%= venue.price %></td>
-        <td class="showDest" ><%= link_to 'More info', venue %></td>
+        <td class="showDest" ><%= link_to 'More info', venue, :class => "header" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,4 +25,4 @@
 
 <br>
 <br>
-<div class = "back btn btn-secondary"><%= link_to 'Back', root_path %> </div>
+<div class = "back btn btn-secondary"><%= link_to 'Back', root_path,:class => "header" %> </div>

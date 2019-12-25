@@ -1,20 +1,28 @@
 <h1 class = "header">Editing event</h1>
 
-<div class = "session newEvent">
+<div class = "session newEvent edit-holder">
 
 <%= form_for @event, url:{action: "update"} do |event| %>
-    <%= event.label :date, :class => "headers" %>
+    <%= event.label :date, :class => "header" %>
     <%= event.date_field :date%>
     <br>
-    <%= event.label :venue, :class => "headers"%>
+    <%= event.label :venue, :class => "header"%>
 
     <%= select_tag("event[venue_id]", options_from_collection_for_select(Venue.all, "id", "name", @event.venue_id.to_s) )%>
     <br>
-    <%= event.label :type_of, :class => "headers"%>
-    <%= event.text_field :type_of%>
+
+    <%= event.label :decorator, :class => "header"%>
+
+    <%= select_tag("event[decorator_id]", options_from_collection_for_select(Decorator.all, "id", "name", @event.decorator_id.to_s) )%>
     <br>
+
+    <%= event.label :type_of, :class => "header"%>
+    <%= event.text_field :type_of%>
+    <br> <div class = "update-submit">
     <%= event.submit%>
 <% end %>
+<%# <br><%= link_to 'Show', @event, :class => "show-back" %> 
+<%# <%= link_to 'Back', events_path %> 
+    </div>
+
 </div>
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
