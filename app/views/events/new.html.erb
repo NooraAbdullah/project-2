@@ -1,22 +1,21 @@
-<div class = "session newEvent">
+<div class = " newEvent">
 
 <%= form_for @event, url:{action: "create"} do |event| %>
-    <%= event.label :date, :class => "headers" %>
+    <%= event.label :date, :class => "header" %>
     <%= event.date_field :date%>
     <br>
-    <%= event.label :venue, :class => "headers"%>
+    <%= event.label :venue, :class => "header"%>
 
     <%= select_tag("event[venue_id]", options_from_collection_for_select(Venue.all, "id", "name") )%>
     <br>
-    <%= event.label :decorator, :class => "headers"%>
+    <%= event.label :decorator, :class => "header"%>
      <%= select_tag("event[decorator_id]", options_from_collection_for_select(Decorator.all, "id", "name") ) %>
     <br>
-    <%= event.label :type_of, :class => "headers"%>
+    <%= event.label :type_of, :class => "header"%>
     <%= event.text_field :type_of%>
-    <br>
+    <br><div class = "update-submit">
     <%= event.submit%>
-<% end %>
+<% end %> </div> </div>
 <%# <div class = "buttonHolder"> %>
-<button class = " headers yourEvents " ><%= link_to 'Your Events', events_path %> </button>
+<button class = " headers yourEvents " ><%= link_to 'Your Events', events_path, :class => "back-ven your-event" %> </button>
 <%# </div> %>
-</div>

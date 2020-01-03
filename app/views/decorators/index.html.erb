@@ -1,7 +1,7 @@
 <%# <div class = "home-body" style="display:none"> </div> %>
 <p id="notice"><%= notice %></p>
 
-<h1 class="headers deco">Decorators</h1>
+<h1 class="header deco">Decorators</h1>
 
 <table class="table">
   <thead class="thead-dark">
@@ -9,8 +9,6 @@
       <th>Name</th>
       <th>City</th>
       <th>Price</th>
-      <th>Phone</th>
-      <th>Image</th>
     </tr>
   </thead>
 
@@ -20,9 +18,7 @@
         <td class="rows"><%= decorator.name %></td> 
         <td class="rows"><%= decorator.city %></td>
         <td class="rows"><%= decorator.price %></td>
-        <td class="rows"><%= decorator.phone %></td>
-        <td class="rows"><%= decorator.image %></td>
-        <td class="showDest" ><%= link_to 'More info', decorator_path(decorator) %></td>
+        <td class="showDest" ><%= link_to 'More info', decorator_path(decorator), :class => "btn-header header" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +27,4 @@
 <br>
 
 <br>
-<div class = "back btn btn-secondary"><%= link_to 'Back', root_path %> </div>
+<div class = "back btn btn-secondary"><%= link_to 'Back', root_path, :class => "btn-header header" %> </div>

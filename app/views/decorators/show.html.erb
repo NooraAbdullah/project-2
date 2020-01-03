@@ -1,25 +1,26 @@
 <p id="notice"><%= notice %></p>
-
+<div class = "deco-holder">
 <p>
-  <strong>Name:</strong>
+  <strong class = "header">Name:</strong>
   <%= @decorator.name %>
 </p>
 
 <p>
-  <strong>City:</strong>
+  <strong class = "header">City:</strong>
   <%= @decorator.city %>
 </p>
 <p>
-  <strong>Price:</strong>
+  <strong class = "header">Price:</strong>
   <%= @decorator.price %>
 </p>
-  <strong>Phone:</strong>
+  <strong class = "header">Phone:</strong>
   <%= @decorator.phone %>
 </p>
 <p>
-  <strong>Images:</strong>
+  <strong class = "header">Images:</strong>
   <%= @decorator.image %>
 </p>
-
-<%= link_to 'Back', venues_path %>
+<div class ="bk">
+<%= link_to 'Back', decorators_path, :class => "back-deco header" %>
 <%# <%= link_to 'Reserve', ## %>
+</div>

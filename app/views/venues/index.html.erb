@@ -17,7 +17,7 @@
         <td class="rows"><%= venue.name %></td> 
         <td class="rows"><%= venue.city %></td>
         <td class="rows"><%= venue.price %></td>
-        <td class="showDest" ><%= link_to 'More info', venue, :class => "header" %></td>
+        <td class="showDest" ><%= link_to 'More info', venue, :class => "header back-ven" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,4 +25,4 @@
 
 <br>
 <br>
-<div class = "back btn btn-secondary"><%= link_to 'Back', root_path,:class => "header" %> </div>
+<div class = "back btn btn-secondary"><%= link_to 'Back', root_path,:class => "header back-ven" %> </div>

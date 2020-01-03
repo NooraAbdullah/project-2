@@ -18,6 +18,7 @@ body {
 text-align: center;
 margin:15px;
 color: #5c5952;
+text-decoration: none;
 font-family: 'Indie Flower', cursive;
 
 }
@@ -68,7 +69,9 @@ font-family: 'Indie Flower', cursive;
     font-weight: 900;
 }
 .newEvent{
-  margin-top: 10%;  
+    margin-top: 10%;
+    margin-left: 40%;
+
 }
 .yourEvents{
     width:250px;
@@ -76,6 +79,7 @@ font-family: 'Indie Flower', cursive;
     font-size: 1.3em;
     margin-left:40%;
     margin-top:10%;
+    border-radius: px;
 }
 .show-holder{
     margin-left:42%;
@@ -88,4 +92,8 @@ font-family: 'Indie Flower', cursive;
 .update-submit{
     margin-left:12%;
     margin-top:8%;
+}
+.your-event {
+    color: #5c5952;
+    border-radius: 5px;
 }
